@@ -8,7 +8,7 @@ async function FilesInFolder(file){
     if(!stat.isDirectory()){
         let extname = path.extname(file)
         let basename = path.basename(file, extname)
-        let filesInformation = `${basename} - ${extname.slice(1)} - ${Math.round(stat.size/1024)} kb\n`
+        let filesInformation = `${basename} - ${extname.slice(1)} - ${stat.size/1024} kb\n`
         process.stdout.write(filesInformation)
     }
 }
